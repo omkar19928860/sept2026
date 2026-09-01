@@ -5,7 +5,7 @@ terraform {
       version = "=5.0.0"
     }
   }
-   backend "azurerm" {
+  backend "azurerm" {
     resource_group_name  = "omkarrg"
     storage_account_name = "omkarstoragea"
     container_name       = "tfstate"

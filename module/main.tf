@@ -3,3 +3,9 @@ module "rg1" {
   resource_groups = var.rgs
 
 }
+
+module "stg1" {
+  source = "../child/02_storageaccount"
+  stg    = var.storage_accounts
+  depends_on = [ module.rg1] 
+}
