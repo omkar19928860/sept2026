@@ -41,17 +41,32 @@ subnet = {
 
 storage_accounts = {
   stg1s = {
-    name                     = "stg1omkstg1"
+    name                     = "stg1omkstg2"
     resource_group_name      = "rg1"
     location                 = "East US"
     account_tier             = "Standard"
     account_replication_type = "LRS"
   }
   stg2 = {
-    name                     = "stg2omstg2"
+    name                     = "stg2omstg3"
     resource_group_name      = "rg2"
     location                 = "West US"
     account_tier             = "Standard"
     account_replication_type = "GRS"
+  }
+}
+
+public_ip = {
+  pip1 = {
+    name                = "pip1"
+    resource_group_name = "rg1"
+    location            = "East US"
+    allocation_method   = "Static"
+  }
+  pip2 = {
+    name                = "pip2"
+    resource_group_name = "rg2"
+    location            = "West US"
+    allocation_method   = "Static"
   }
 }

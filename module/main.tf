@@ -21,3 +21,9 @@ module "subnet" {
   subnet     = var.subnet
   depends_on = [module.vnet1]
 }
+
+module "pip1" {
+  source     = "../child/05_publicip"
+  pip        = var.public_ip
+  depends_on = [module.rg1]
+}
