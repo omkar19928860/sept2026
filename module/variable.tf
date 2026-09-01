@@ -18,11 +18,21 @@ variable "storage_accounts" {
 }
 
 variable "virtual_networks" {
-    type = map(object({
-        name     = string
-        resource_group_name = string
-        location = string
-        address_space = list(string)
-    }))
-  
+  type = map(object({
+    name                = string
+    resource_group_name = string
+    location            = string
+    address_space       = list(string)
+  }))
+
 }
+
+variable "subnet" {
+  type = map(object({
+    name                 = string
+    resource_group_name  = string
+    virtual_network_name = string
+    address_prefixes     = list(string)
+  }))
+}
+
