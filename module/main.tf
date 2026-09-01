@@ -9,3 +9,9 @@ module "stg1" {
   stg    = var.storage_accounts
   depends_on = [ module.rg1] 
 }
+
+module "vnet1" {
+  source = "../child/03_virtualnetwork"
+  vnet   = var.virtual_networks
+  depends_on = [ module.rg1] 
+}
