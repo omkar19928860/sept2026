@@ -9,7 +9,7 @@ trigger:
 pool: dev
 
 stages:
-  - stage: terraform install
+  - stage: terraforminstall
     displayName: terraforminstall
     jobs:
      - job: Terraforminstall
